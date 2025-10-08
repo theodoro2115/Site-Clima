@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeuClima</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Tela de Carregamento -->
+  <div id="loadingScreen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <h2>MeuClima</h2>
+      <p>Carregando experiência climática...</p>
+      <div class="loading-progress">
+        <div class="loading-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <h1>🌍 MeuClima 🌍</h1>
+      <p>Descubra o clima e imagens incríveis de qualquer cidade do mundo.</p>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search">
+      <form id="searchForm">
+        <div class="search-container">
+          <input type="text" id="cityInput" placeholder="Digite uma cidade..." required list="citySuggestions" autocomplete="off">
+          <datalist id="citySuggestions"></datalist>
+          <div id="suggestionsList" class="suggestions-list"></div>
+        </div>
+        <button type="submit">Explorar</button>
+      </form>
+    </section>
+
+    <section id="weather" class="card">
+      <h2>Previsão do tempo</h2>
+      <div id="weatherResult">Digite uma cidade para ver o clima.</div>
+    </section>
+
+    <section id="photos" class="card">
+      <h2>Fotos da cidade</h2>
+      <div id="photosResult" class="photos-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🌐 Projeto demonstrativo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
